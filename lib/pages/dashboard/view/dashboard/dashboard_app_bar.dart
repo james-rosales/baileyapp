@@ -41,7 +41,7 @@ class DashboardAppBar extends StatelessWidget {
                   child: ListView(
                     children: const [
                       Text(
-                        'Hi, Dustin ',
+                        'Hi, Dustin rosales',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,

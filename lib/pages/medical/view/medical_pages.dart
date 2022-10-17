@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../bloc/bloc.dart';
-import '../view.dart';
 
-class DashboardPages extends StatelessWidget {
-  DashboardPages({super.key});
+import '../medical.dart';
+
+class MedicalPages extends StatelessWidget {
+  MedicalPages({super.key});
   final PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
-    return BlocListener<DashboardBloc, DashboardState>(
+    return BlocListener<MedicalBloc, MedicalState>(
       listenWhen: (previous, current) =>
           previous.currentTab != current.currentTab,
       listener: (context, state) {
@@ -19,8 +19,8 @@ class DashboardPages extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          const DashboardBody(),
-          const Text('tab 2'),
+          const MedicalBody(),
+          const Center(child: Text('twdwdwab 2')),
           Container(),
         ],
       ),

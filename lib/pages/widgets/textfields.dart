@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Textfield extends StatelessWidget {
-  const Textfield({super.key, required this.hintText, this.prefixIcon});
+class Textfields extends StatelessWidget {
+  const Textfields({super.key, required this.hintText, this.prefixIcon});
   final String hintText;
   final Widget? prefixIcon;
 
@@ -16,10 +16,10 @@ class Textfield extends StatelessWidget {
             ),
           ),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey),
             borderRadius: BorderRadius.all(Radius.circular(10))),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         filled: true,

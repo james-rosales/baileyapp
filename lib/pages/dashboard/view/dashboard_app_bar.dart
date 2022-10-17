@@ -1,4 +1,4 @@
-import 'package:bailey_app/pages/dashboard/widgets/textfield.dart';
+import 'package:bailey_app/pages/widgets/textfields.dart';
 import 'package:flutter/material.dart';
 
 class DashboardAppBar extends StatelessWidget {
@@ -66,7 +66,7 @@ class DashboardAppBar extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.only(left: 20.0, right: 20, bottom: 10),
-              child: Textfield(
+              child: Textfields(
                 hintText: 'Search Record',
                 prefixIcon: Icon(
                   Icons.search,

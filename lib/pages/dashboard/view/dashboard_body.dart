@@ -1,11 +1,12 @@
 import 'package:bailey_app/pages/dashboard/dashboard.dart';
-import 'package:bailey_app/pages/dashboard/widgets/changeable_image.dart';
-import 'package:bailey_app/pages/dashboard/widgets/icon_buttons.dart';
-import 'package:bailey_app/pages/dashboard/widgets/labeled_container.dart';
+import 'package:bailey_app/pages/widgets/changeable_image.dart';
+import 'package:bailey_app/pages/widgets/icon_buttons.dart';
+import 'package:bailey_app/pages/widgets/labeled_container.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 // ignore: must_be_immutable
 class DashboardBody extends StatelessWidget {
@@ -20,18 +21,23 @@ class DashboardBody extends StatelessWidget {
           child: Column(
         children: [
           Row(
-            children: const [
+            children: [
               Padding(
-                padding: EdgeInsets.all(10.0),
-                child: IconButtons(
-                  backgroundcolor: Color.fromARGB(255, 124, 187, 247),
-                  label: 'Medical Charts',
-                  coloricon: Colors.white,
-                  textColor: Colors.white,
-                  prefix: FontAwesomeIcons.suitcaseMedical,
+                padding: const EdgeInsets.all(10.0),
+                child: InkWell(
+                  child: const IconButtons(
+                    backgroundcolor: Color.fromARGB(255, 124, 187, 247),
+                    label: 'Medical Charts',
+                    coloricon: Colors.white,
+                    textColor: Colors.white,
+                    prefix: FontAwesomeIcons.suitcaseMedical,
+                  ),
+                  onTap: () {
+                    context.push('/medical');
+                  },
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(10.0),
                 child: IconButtons(
                   backgroundcolor: Color.fromARGB(255, 247, 124, 124),
@@ -41,7 +47,7 @@ class DashboardBody extends StatelessWidget {
                   prefix: FontAwesomeIcons.heartPulse,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(10.0),
                 child: IconButtons(
                   backgroundcolor: Color.fromARGB(255, 124, 247, 210),

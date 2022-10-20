@@ -16,8 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$VerificationState {
-  int get countdowtimer => throw _privateConstructorUsedError;
-  int get duration => throw _privateConstructorUsedError;
+  int get countdowntimer => throw _privateConstructorUsedError;
+  String get codestate => throw _privateConstructorUsedError;
+  String get errorText => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $VerificationStateCopyWith<VerificationState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $VerificationStateCopyWith<$Res> {
   factory $VerificationStateCopyWith(
           VerificationState value, $Res Function(VerificationState) then) =
       _$VerificationStateCopyWithImpl<$Res>;
-  $Res call({int countdowtimer, int duration});
+  $Res call({int countdowntimer, String codestate, String errorText});
 }
 
 /// @nodoc
@@ -43,18 +44,23 @@ class _$VerificationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? countdowtimer = freezed,
-    Object? duration = freezed,
+    Object? countdowntimer = freezed,
+    Object? codestate = freezed,
+    Object? errorText = freezed,
   }) {
     return _then(_value.copyWith(
-      countdowtimer: countdowtimer == freezed
-          ? _value.countdowtimer
-          : countdowtimer // ignore: cast_nullable_to_non_nullable
+      countdowntimer: countdowntimer == freezed
+          ? _value.countdowntimer
+          : countdowntimer // ignore: cast_nullable_to_non_nullable
               as int,
-      duration: duration == freezed
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+      codestate: codestate == freezed
+          ? _value.codestate
+          : codestate // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorText: errorText == freezed
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -66,7 +72,7 @@ abstract class _$$_VerificationStateCopyWith<$Res>
           $Res Function(_$_VerificationState) then) =
       __$$_VerificationStateCopyWithImpl<$Res>;
   @override
-  $Res call({int countdowtimer, int duration});
+  $Res call({int countdowntimer, String codestate, String errorText});
 }
 
 /// @nodoc
@@ -82,18 +88,23 @@ class __$$_VerificationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? countdowtimer = freezed,
-    Object? duration = freezed,
+    Object? countdowntimer = freezed,
+    Object? codestate = freezed,
+    Object? errorText = freezed,
   }) {
     return _then(_$_VerificationState(
-      countdowtimer: countdowtimer == freezed
-          ? _value.countdowtimer
-          : countdowtimer // ignore: cast_nullable_to_non_nullable
+      countdowntimer: countdowntimer == freezed
+          ? _value.countdowntimer
+          : countdowntimer // ignore: cast_nullable_to_non_nullable
               as int,
-      duration: duration == freezed
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+      codestate: codestate == freezed
+          ? _value.codestate
+          : codestate // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorText: errorText == freezed
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -101,18 +112,22 @@ class __$$_VerificationStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_VerificationState implements _VerificationState {
-  _$_VerificationState({this.countdowtimer = 60, this.duration = 0});
+  _$_VerificationState(
+      {this.countdowntimer = 60, this.codestate = '', this.errorText = ''});
 
   @override
   @JsonKey()
-  final int countdowtimer;
+  final int countdowntimer;
   @override
   @JsonKey()
-  final int duration;
+  final String codestate;
+  @override
+  @JsonKey()
+  final String errorText;
 
   @override
   String toString() {
-    return 'VerificationState(countdowtimer: $countdowtimer, duration: $duration)';
+    return 'VerificationState(countdowntimer: $countdowntimer, codestate: $codestate, errorText: $errorText)';
   }
 
   @override
@@ -121,15 +136,17 @@ class _$_VerificationState implements _VerificationState {
         (other.runtimeType == runtimeType &&
             other is _$_VerificationState &&
             const DeepCollectionEquality()
-                .equals(other.countdowtimer, countdowtimer) &&
-            const DeepCollectionEquality().equals(other.duration, duration));
+                .equals(other.countdowntimer, countdowntimer) &&
+            const DeepCollectionEquality().equals(other.codestate, codestate) &&
+            const DeepCollectionEquality().equals(other.errorText, errorText));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(countdowtimer),
-      const DeepCollectionEquality().hash(duration));
+      const DeepCollectionEquality().hash(countdowntimer),
+      const DeepCollectionEquality().hash(codestate),
+      const DeepCollectionEquality().hash(errorText));
 
   @JsonKey(ignore: true)
   @override
@@ -139,13 +156,17 @@ class _$_VerificationState implements _VerificationState {
 }
 
 abstract class _VerificationState implements VerificationState {
-  factory _VerificationState({final int countdowtimer, final int duration}) =
-      _$_VerificationState;
+  factory _VerificationState(
+      {final int countdowntimer,
+      final String codestate,
+      final String errorText}) = _$_VerificationState;
 
   @override
-  int get countdowtimer;
+  int get countdowntimer;
   @override
-  int get duration;
+  String get codestate;
+  @override
+  String get errorText;
   @override
   @JsonKey(ignore: true)
   _$$_VerificationStateCopyWith<_$_VerificationState> get copyWith =>

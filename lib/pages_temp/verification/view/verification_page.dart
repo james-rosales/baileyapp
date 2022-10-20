@@ -1,7 +1,7 @@
-import 'package:bailey_app/pages/dashboard/dashboard.dart';
-import 'package:bailey_app/pages/verification/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../verification.dart';
 
 class VerificationPage extends StatelessWidget {
   const VerificationPage({super.key});
@@ -10,15 +10,15 @@ class VerificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<VerificationBloc>(
         create: (context) => VerificationBloc(VerificationState())
-          ..add(VerificationStartTimer()),
-        child: Scaffold(
+          ..add(const VerificationStartTimer()),
+        child: const Scaffold(
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(
               50,
             ),
             child: VerificationAppBar(),
           ),
-          body: VerificationForm(),
+          body: SingleChildScrollView(child: VerificationForm()),
         ));
   }
 }

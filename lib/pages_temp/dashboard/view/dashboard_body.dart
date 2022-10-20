@@ -1,7 +1,7 @@
-import 'package:bailey_app/pages/dashboard/dashboard.dart';
-import 'package:bailey_app/pages/widgets/changeable_image.dart';
-import 'package:bailey_app/pages/widgets/icon_buttons.dart';
-import 'package:bailey_app/pages/widgets/labeled_container.dart';
+import 'package:bailey_app/pages_temp/dashboard/dashboard.dart';
+import 'package:bailey_app/pages_temp/widgets/changeable_image.dart';
+import 'package:bailey_app/pages_temp/widgets/icon_buttons.dart';
+import 'package:bailey_app/pages_temp/widgets/labeled_container.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

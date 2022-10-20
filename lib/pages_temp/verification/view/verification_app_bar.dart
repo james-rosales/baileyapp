@@ -7,7 +7,7 @@ class VerificationAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      leading: Icon(
+      leading: const Icon(
         Icons.chevron_left_outlined,
         color: Colors.black,
       ),

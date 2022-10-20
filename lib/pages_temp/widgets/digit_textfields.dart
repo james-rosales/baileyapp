@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DigitTextfields extends StatelessWidget {
-  DigitTextfields({super.key});
+  const DigitTextfields({super.key});
 
   @override
   Widget build(BuildContext context) {

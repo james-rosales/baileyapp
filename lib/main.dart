@@ -1,6 +1,6 @@
-import 'package:bailey_app/pages/dashboard/view/view.dart';
-import 'package:bailey_app/pages/medical/view/view.dart';
-import 'package:bailey_app/pages/verification/verification.dart';
+import 'package:bailey_app/pages/login/login.dart';
+import 'package:bailey_app/pages/signup/signup.dart';
+import 'package:bailey_app/pages/splash_screen/view/screen_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,19 +16,19 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const VerificationPage();
+          return const LoginPage();
         },
       ),
       GoRoute(
-        path: '/dashboard',
+        path: '/signup',
         builder: (BuildContext context, GoRouterState state) {
-          return const DashboardPage();
+          return SignupPage();
         },
       ),
       GoRoute(
-        path: '/medical',
+        path: '/login',
         builder: (BuildContext context, GoRouterState state) {
-          return const MedicalPage();
+          return LoginPage();
         },
       ),
     ],
